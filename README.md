@@ -8,7 +8,19 @@ For the sake of simplicity, this application only responds to the following mess
 - message containing `ice cream` - `I prefer gelato`
 - message not containing either of the above - `Please send either the word 'pizza' or 'ice cream' for a different response`
 
-### Start
+### TLDR
+
+- Clone this git `git clone https://github.com/kcemenike/telnyx_autoresponder.git`
+- Create virtual environment (optional)
+- `cd telnyx_autoresponder`
+- `pip install -r requirements.txt`
+- Purchase a number in [Mission Control Portal](https://portal.telnyx.com/#/app/numbers/buy-numbers). Get credits
+- Get [API key](https://portal.telnyx.com/#/app/api-keys)
+- Create .env file using .env.sample as template
+- Run `python src\app.py`
+- Send a message to your purchased number and see the auto-responder in action :-)
+
+## Full Guide
 
 Clone this git by running  
 `git clone https://github.com/kcemenike/telnyx_autoresponder.git`
@@ -37,7 +49,7 @@ This will install all the required packages specified in the `requirements.txt` 
 - [Flask](http://flask.pocoo.org/) is a lightweight backend microservices framework. Flask is required to handle requests and responses.
 - [Telnyx](https://telnyx.com) is a Cloud Platform As a Service (CPAAS) Provider
 
-## Running the server (Windows/Linux)
+### Running the server (Windows/Linux)
 
 To run the server, navigate to the project directory and run:  
 `python src/app.py`
@@ -52,10 +64,14 @@ export FLASK_ENV=debug
 flask run --reload
 ```
 
+#### Important
+
+To communicate with the Telnyx Endpoint, you would need your service to be available over the internet. To do this, please use a tunneling service like ngrok. A simple guide is [here](https://developers.telnyx.com/docs/v2/development/ngrok)
+
 ### Environment variables
 
-- TELNYX_API_KEY: Your Telnyx API V2 key. Get it from your [Mission Control Portal](https://portal.telnyx.com/) account and navigate to the Auth V2 tab in the "Auth" section.
-- PORT: specifies the port you intend to run the server
+- **TELNYX_API_KEY**: Your Telnyx API V2 key. Get it from your [Mission Control Portal](https://portal.telnyx.com/) account and navigate to the Auth V2 tab in the "Auth" section.
+- **PORT**: specifies the port you intend to run the server
 
 ## Testing
 
