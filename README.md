@@ -1,4 +1,4 @@
-# SMS AutoResponder API
+# SMS AutoResponder (Telnyx)
 
 A simple application that automatically responds to SMS messages using the Telnyx API
 
