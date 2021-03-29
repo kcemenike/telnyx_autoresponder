@@ -2,12 +2,7 @@ import os
 from dotenv import load_dotenv
 from flask import Flask, request, abort, jsonify
 import telnyx
-
-MAPPING = {
-    "pizza": "Chicago pizza is the best",
-    "ice cream": "I prefer gelato"
-}
-DEFAULT = "Please send either the word 'pizza' or 'ice cream' for a different response"
+from constants import MAPPING, DEFAULT
 
 
 def parse_message(body: dict):

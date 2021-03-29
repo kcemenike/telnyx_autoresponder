@@ -2,13 +2,24 @@
 
 A simple application that automatically responds to SMS messages using the Telnyx API
 
-For the sake of simplicity, this application only responds to the following messages
+## How it works
 
-- message containing `pizza` - `Chicago pizza is the best`
-- message containing `ice cream` - `I prefer gelato`
-- message not containing either of the above - `Please send either the word 'pizza' or 'ice cream' for a different response`
+- Sign up on Telnyx and [get a Telnyx number](https://portal.telnyx.com/#/app/numbers/buy-numbers)
+- Deploy this application
+- Send an SNS to your Telnyx number and you should get a custom auto-response
 
-### TLDR
+For the sake of simplicity, this application only responds to messages using the following logic:
+
+- message containing **`pizza`** will be responded with `Chicago pizza is the best`
+- message containing **`ice cream`** will be responded with `I prefer gelato`
+- message not containing either of the above will be responded with `Please send either the word 'pizza' or 'ice cream' for a different response`
+
+You can edit this mapping by modifying the MAPPING object in [constants.py](src/constants.py)  
+You can also set the default value by modifying the DEFAULT object in [constants.py](src/constants.py)
+
+<img src="assets/img/img.jpg" alt="image" width="50%"/>
+
+## Quick setup
 
 - Clone this git `git clone https://github.com/kcemenike/telnyx_autoresponder.git`
 - Create virtual environment (optional)
