@@ -6,11 +6,12 @@ For the sake of simplicity, this application only responds to the following mess
 
 - message containing `pizza` - `Chicago pizza is the best`
 - message containing `ice cream` - `I prefer gelato`
+- message not containing either of the above - `Please send either the word 'pizza' or 'ice cream' for a different response`
 
 ### Start
 
 Clone this git by running  
-`git clone https://github.com/kcemenike/telynx-autoresponder.git`
+`git clone https://github.com/kcemenike/telnyx_autoresponder.git`
 
 ### Installing dependencies
 
