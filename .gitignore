@@ -1,0 +1,8 @@
+# Ignore VSVode files
+.vscode/
+
+# Ignore history files
+.history/
+
+# Ignore environment variables
+.env
