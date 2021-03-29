@@ -4,5 +4,8 @@
 # Ignore history files
 .history/
 
+# Ignore pycache files
+__pycache__/
+
 # Ignore environment variables
 .env
